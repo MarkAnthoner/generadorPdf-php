@@ -1,0 +1,90 @@
+html{
+	font-size: 61.5%;
+	box-sizing: border-box; 
+}
+
+*, *:before, *after{ 
+	box-sizing: inherit;
+}
+
+body {
+    color: black;
+    display: table;
+    font-family: Georgia, serif;
+    font-size: 24px;
+    text-align: center;
+}
+
+.container {
+    border: 5px solid tan;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+.logo-fondo{
+    background-image: url('plantilla3/src/FondoCertificado.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1000px;
+    height: 900px;
+    position: relative;
+}
+
+.header-image{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5rem 5rem 2rem;
+    
+}
+
+.fondo{
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 200px;
+    height: 200px;
+}
+
+.fondoUnam{
+    background-image: url('plantilla3/src/logo_unam.png');
+    
+}
+
+.fondoFi{
+    background-image: url('plantilla3/src/escudo_fi_color.png');
+}
+
+.fondo_unica{
+    background-image: url('plantilla3/src/logo_unicaA.png');
+    width: 200px;
+    height: 200px;
+    background-position: center;
+}
+
+.datos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.marquee {
+    color: tan;
+    font-size: 36px;
+    padding: 0.5rem;
+}
+.assignment {
+    padding: 1rem;
+    font-size: 17px;
+}
+
+.person {
+    border-bottom: 2px solid black;
+    font-size: 24px;
+    font-style: italic;
+    width: 400px;
+}
+.reason {
+    padding: 1rem;
+    font-size: 20px;
+}
