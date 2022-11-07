@@ -9,7 +9,9 @@ require_once('plantilla3/plantillaCertificado.php');
 $css = file_get_contents('plantilla3/style.css');
 
 $mpdf = new \Mpdf\Mpdf([
-    "format" => "A4-L",
+    "format" => "Letter",
+    "mode" => 'utf-8',
+    "orientation" => 'L',
     'setAutoTopMargin' => 'stretch',
         'autoMarginPadding' => 0,
         'bleedMargin' => 0,
