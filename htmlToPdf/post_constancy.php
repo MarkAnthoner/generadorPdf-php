@@ -21,5 +21,6 @@
         'orientation' => 'landscape'
     ));
     $pdf->addPage($content);
+
     $pdf->send();
 ?>

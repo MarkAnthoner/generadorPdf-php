@@ -109,7 +109,15 @@
                 padding: 10rem 10rem 0 10rem ;
                 font-size: 10px;
                 font-weight: bold;
-            }";
+            }
+            
+            .cajaQr img{
+                margin: 10px;
+                width: 90px;
+                height: 90px;
+            }
+
+            ";
         return $estilo;
     }
 ?>
