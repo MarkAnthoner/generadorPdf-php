@@ -1,17 +1,24 @@
 <?php
+    $array_logos = [];
+    $fondo = $_POST['fondo'];
+    if(!empty($_POST['logos'])){
+        foreach($_POST['logos'] as $logo){
+            array_push($array_logos, $logo);
+        }
+    }
     $nombre = $_POST['nombre'];
     $mensaje = $_POST['mensaje'];
     $firma = $_POST['firma'];
-    $fondo = $_POST['fondo'];
+    
 
     include_once('./vendor/autoload.php');
     use mikehaertl\wkhtmlto\Pdf;
 
     require_once('plantilla.php');
-    $content = getPlantilla($nombre, $mensaje, $firma);
+    $content = getPlantilla($nombre, $mensaje, $firma,$array_logos);
 
     require_once('estilo.php');
-    $estilo = getStyle($fondo);
+    $estilo = getStyle($fondo, $array_logos);
 
     $pdf = new Pdf(array(
         'user-style-sheet' => $estilo

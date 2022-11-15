@@ -1,6 +1,31 @@
 <?php
 
-    function getPlantilla($nombre, $mensaje, $firma){
+    function getPlantilla($nombre, $mensaje, $firma, $logos){
+        
+        $añadirLogos = "";
+        if(!empty($logos)){
+            foreach($logos as $logo){
+                if(strcmp($logo,"FI")==0){
+                    $añadirLogos .=
+                    '
+                        <div class="fondo fondoFi"></div>
+                    ';
+                }
+                elseif(strcmp($logo,"UNAM")==0){
+                    $añadirLogos .=
+                    '
+                        <div class="fondo fondoUnam"></div>
+                    ';
+
+                }elseif(strcmp($logo,"UNICA")==0){
+                    $añadirLogos .=
+                    '
+                        <div class="fondo fondo_unica"></div>
+                    ';
+                }
+            }
+        }
+
         $plantilla = 
             '<!DOCTYPE html>
             <html lang="en">
@@ -14,9 +39,7 @@
                     <div class="container">
                         <div class="logo-fondo">
                             <div class="header-image">
-                                <div class="fondo fondoUnam"></div>
-                                <div class="fondo fondoFi"></div>
-                                <div class="fondo fondo_unica"></div>
+                                '.$añadirLogos.'
                             </div>
                             <div class="datos">
                                 <div class="marquee">

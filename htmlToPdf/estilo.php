@@ -1,7 +1,7 @@
 <?php
     header("Content-Type: text/css; charset: UTF-8");
 
-    function getStyle($fondo){
+    function getStyle($fondo, $logos){
         
         if(strcmp($fondo,"Fondo1")==0){
             $image_fondo = 'FondoCertificado.jpg';
@@ -46,35 +46,9 @@
                 width: 100%;
                 height: 100%;
             }
-            
+
             .header-image{
-                display: -webkit-box;
-                display: flex;
-                flex-direction: row;
-                -webkit-box-pack: justify;
-                justify-content: space-between;
-                padding: 5rem 10rem 0 10rem; /*T R D L*/
-            }
-            
-            .fondo{
-                background-repeat: no-repeat;
-                background-size: contain;
-                width: 100px;
-                height: 100px;
-            }
-            
-            .fondoUnam{
-                background-image: url('http://localhost/htmlToPdf/src/logo_unam.png');
-                
-            }
-            
-            .fondoFi{
-                background-image: url('http://localhost/htmlToPdf/src/escudo_fi_color.png');
-            }
-            
-            .fondo_unica{
-                background-image: url('http://localhost/htmlToPdf/src/logo_unicaA.png');
-                background-position: center;
+                padding: 2rem;
             }
             
             .datos{
@@ -101,12 +75,13 @@
             }
             
             .firmas{
+                margin: 0 auto;
                 display: -webkit-box;
                 display: flex;
                 flex-direction: row;
                 -webkit-box-pack: justify;
                 justify-content: space-between;
-                padding: 10rem 10rem 0 10rem ;
+                padding: 10rem 15rem 0 15rem ;
                 font-size: 10px;
                 font-weight: bold;
             }
@@ -118,6 +93,56 @@
             }
 
             ";
+        
+        if(!empty($logos)){
+            $estilo .=
+            "
+                .header-image{
+                    display: -webkit-box;
+                    display: flex;
+                    flex-direction: row;
+                    -webkit-box-pack: justify;
+                    justify-content: space-between;
+                    padding: 5rem 10rem 0 10rem; 
+                }
+                
+                .fondo{
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 100px;
+                    height: 100px;
+                }
+            ";
+        }
+        foreach($logos as $logo){
+            if(strcmp($logo,"FI")==0){
+                $estilo .=
+                "
+                    .fondoFi{
+                        background-image: url('http://localhost/htmlToPdf/src/FI.png');
+                    }
+                ";
+            }
+            elseif(strcmp($logo,"UNAM")==0){
+                $estilo .=
+                "
+                    .fondoUnam{
+                        background-image: url('http://localhost/htmlToPdf/src/UNAM.png');
+                        
+                    }
+                ";
+
+            }elseif(strcmp($logo,"UNICA")==0){
+                $estilo .=
+                "
+                    .fondo_unica{
+                        background-image: url('http://localhost/htmlToPdf/src/UNICA.png');
+                        background-position: center;
+                    }
+                ";
+            }
+        }
+        
         return $estilo;
     }
 ?>

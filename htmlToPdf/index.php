@@ -8,6 +8,19 @@
 </head>
 <body>
     <form name="formulario" method="post" action="post_constancy.php">
+        <label>Imagen de fondo</label>
+        <input list="Fondo" name="fondo">
+        <datalist id="Fondo">
+            <option value="Fondo1">
+            <option value="Fondo2">
+            <option value="Fondo3">
+        </datalist>
+        <br>
+        <label>Logos</label>
+        <input type="checkbox" name="logos[]" value="FI">FI</input>
+        <input type="checkbox" name="logos[]" value="UNAM">UNAM</input>
+        <input type="checkbox" name="logos[]" value="UNICA">UNICA</input>
+        <br>
         <label>Nombre del estudiante</label>
         <input list="Nombres" name="nombre">
         <datalist id="Nombres">
@@ -28,13 +41,7 @@
             <option value="Firma3">
         </datalist>
         <br>
-        <label>Imagen de fondo</label>
-        <input list="Fondo" name="fondo">
-        <datalist id="Fondo">
-            <option value="Fondo1">
-            <option value="Fondo2">
-            <option value="Fondo3">
-        </datalist>
+        
         <input type="submit"/>
     </form>
 </body>
