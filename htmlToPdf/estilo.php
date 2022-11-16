@@ -56,7 +56,7 @@
             }
             
             .marquee {
-                color: tan;
+                /*color: tan;*/
                 font-size: 30px;
             }
             .assignment {
@@ -64,18 +64,45 @@
             }
             
             .person {
-                border-bottom: 2px solid black;
+                /*border-bottom: 2px solid black;*/
                 font-size: 24px;
-                font-style: italic;
-                width: 400px;
+                /*font-style: italic;*/
+                width: 800px;
                 margin: 0 auto;
             }
             .reason {
+                margin: 0 auto;
+                max-width: 1000px;
                 font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 60px;
+            }
+            .impartidos {
+                margin: 0 auto;
+                margin-top: 60px;
+                max-width: 500px;
+                font-size: 14px;
+            }
+
+            .lema {
+                margin: 0 auto;
+                margin-top: 30px;
+                max-width: 800px;
+                font-size: 14px;
+                font-weight: bold;
+            }
+
+            .fecha {
+                margin: 0 auto;
+                max-width: 800px;
+                font-size: 14px;
+                font-weight: bold;
+                margin-bottom: 0;
             }
             
             .firmas{
                 margin: 0 auto;
+                margin-top: -80px;
                 display: -webkit-box;
                 display: flex;
                 flex-direction: row;

@@ -8,6 +8,7 @@
 </head>
 <body>
     <form name="formulario" method="post" action="post_constancy.php">
+        <br>
         <label>Imagen de fondo</label>
         <input list="Fondo" name="fondo">
         <datalist id="Fondo">
@@ -16,10 +17,14 @@
             <option value="Fondo3">
         </datalist>
         <br>
+
+        <br>
         <label>Logos</label>
         <input type="checkbox" name="logos[]" value="FI">FI</input>
         <input type="checkbox" name="logos[]" value="UNAM">UNAM</input>
         <input type="checkbox" name="logos[]" value="UNICA">UNICA</input>
+        <br>
+
         <br>
         <label>Nombre del estudiante</label>
         <input list="Nombres" name="nombre">
@@ -29,8 +34,22 @@
             <option value="Nombre3">
         </datalist>
         <br>
+
+        <br>
         <label>Mensaje para el estudiante</label>
         <input type="text" name="mensaje">
+        <br>
+
+        <br>
+        <label>Quien imparte los Cursos</label>
+        <input type="text" name="imparte">
+        <br>
+
+        <br>
+        <label>Lema UNAM</label>
+        <input type="text" name="lema">
+        <br>
+
         <br>
         </datalist>
         <label>Firma 1</label>

@@ -1,6 +1,6 @@
 <?php
 
-    function getPlantilla($nombre, $mensaje, $firma, $logos){
+    function getPlantilla($nombre, $mensaje, $firma, $logos, $imparte, $lema, $fecha){
         
         $añadirLogos = "";
         if(!empty($logos)){
@@ -43,17 +43,29 @@
                             </div>
                             <div class="datos">
                                 <div class="marquee">
-                                    <h1>Constancy</h1>
+                                    <h1>Constancia</h1>
                                 </div>
                                 <div class="person">
                                     <h2>'.$nombre.'</h2>
                                 </div>
                                 <div class="assignment">
-                                    <h5>For his excellence and wonderful:</h5>
+                                    <h5>Por su excelente y estupendo:</h5>
                                 </div>
                                 <div class="reason">
                                     <h3>'.$mensaje.'</h3>
                                 </div>
+                                <div class="impartidos">
+                                    <h3>'.$imparte.'</h3>
+                                </div>
+
+                                <div class="lema">
+                                    <h3>'.$lema.'</h3>
+                                </div>
+
+                                <div class="fecha">
+                                    <h3>'.$fecha.'</h3>
+                                </div>
+
                                 <div class="firmas">
                                     <div class="firma1">
                                         <div class="cajaQr">
