@@ -1,4 +1,15 @@
 <?php
+
+    /*
+    Problemas al cargar imágenes (logos y fondos) y códigos qr 
+        Para que se genere el archivo pdf de manera correcta, al bajar el repositorio,
+        se tiene que colocar la carpeta "htmlToPdf" directamente en la raiz de "htdocs" 
+        (Si se está usando xampp) para que cargue las imágenes con la ruta correcta.
+        La ruta que debería tomar xampp para las imagenes es la siguiente:
+            localhost/htmlToPdf/src/...
+            localhost/htmlToPdf/qr/...
+    */
+
     $array_logos = [];
     $fondo = $_POST['fondo'];
     if(!empty($_POST['logos'])){
