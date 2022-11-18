@@ -122,24 +122,39 @@
             ";
         
         if(!empty($logos)){
-            $estilo .=
-            "
-                .header-image{
-                    display: -webkit-box;
-                    display: flex;
-                    flex-direction: row;
-                    -webkit-box-pack: justify;
-                    justify-content: space-between;
-                    padding: 5rem 10rem 0 10rem; 
-                }
-                
-                .fondo{
+            $estilo.=    
+                ".fondo{
                     background-repeat: no-repeat;
                     background-size: contain;
                     width: 100px;
                     height: 100px;
                 }
-            ";
+                ";
+            if(sizeof($logos)==1){
+                $estilo .=
+                "
+                    .header-image{
+                        display: -webkit-box;
+                        display: flex;
+                        flex-direction: row;
+                        -webkit-box-pack: center;
+                        justify-content: center;
+                        padding: 5rem 10rem 0 10rem; 
+                    }   
+                "; 
+            }else{
+                $estilo .=
+                "
+                    .header-image{
+                        display: -webkit-box;
+                        display: flex;
+                        flex-direction: row;
+                        -webkit-box-pack: justify;
+                        justify-content: space-between;
+                        padding: 5rem 10rem 0 10rem; 
+                    }   
+                ";
+            }
         }
         foreach($logos as $logo){
             if(strcmp($logo,"FI")==0){
