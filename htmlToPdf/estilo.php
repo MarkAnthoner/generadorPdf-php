@@ -112,8 +112,54 @@
                 font-size: 10px;
                 font-weight: bold;
             }
-            
-            .cajaQr img{
+
+            .reverso {
+                margin: auto;
+                margin-top: 150px;
+                /*background: green;*/
+                max-width: 1300px;
+                height: 400px;
+                display: -webkit-box;
+                display: grid;
+                align-items: center;
+                justify-items: center; 
+                grid-template-columns: 1fr 1fr;
+              }
+              
+              .item1 {
+                margin: 30px; 
+                margin-left: 280px;
+                margin-right: 100px;
+                /*background: lightgreen;*/
+                text-align: center;
+                padding: 150px 0;
+              }
+
+              .item2{
+                margin: 30px; 
+                max-width: 800px;
+                /*background: lightblue;*/
+                display: -webkit-box;
+                display: grid;
+                align-items: center;
+                justify-items: center; 
+                grid-template-columns: 1fr 1fr;
+                text-align: left;
+                font-size: 19px;
+              }
+
+              .elemento{
+                padding: 100px 0;
+              }
+
+              .cajaQrReverso img{
+                width: 125px;
+                height: 125px;
+                padding: 112px 0;
+            }
+
+
+              .cajaQr img{
                 margin: 10px;
                 width: 90px;
                 height: 90px;

@@ -60,6 +60,11 @@
             <option value="Firma3">
         </datalist>
         <br>
+
+        <br>
+        <label>Folio</label>
+        <input type="text" name="folio">
+        <br>
         
         <input type="submit"/>
     </form>

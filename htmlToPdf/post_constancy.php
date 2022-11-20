@@ -22,6 +22,7 @@
     $firma = $_POST['firma'];
     $imparte = $_POST['imparte'];
     $lema = $_POST['lema'];
+    $folio = $_POST['folio'];
 
 
     $dia = date("d");
@@ -88,7 +89,23 @@
     $pdf->setOptions(array(
         'orientation' => 'landscape'
     ));
+
     $pdf->addPage($content);
+
+
+
+
+
+
+
+
+    //Reverso de pdf
+
+    $liga = "https://www.unica.unam.com.mx";
+
+    require_once('plantillaReverso.php');
+    $reverseContent = getPlantillaReverso($folio, $liga, $array_logos);
+    $pdf->addPage($reverseContent);
 
     $pdf->send();
 ?>
