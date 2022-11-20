@@ -3,8 +3,8 @@ App web para generar constancias en PDF con PHP, WKHTMLTOPDF y Postgres (Pruebas
 
 Tareas pendientes:
 - [ ] Probar con nombres mayores a 500 caractéres para la constancia.
-- [ ] Darle un formato más parecido a la constancia proporcionada por el DID.
-- [ ] Hacer la parte trasera de la constancia.
+- [✔] Darle un formato más parecido a la constancia proporcionada por el DID.
+- [✔] Hacer la parte trasera de la constancia.
     - Número de folio.
     - Código QR.
 - [ ] Insertar contenido en la base de datos.
