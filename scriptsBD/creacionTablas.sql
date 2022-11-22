@@ -62,7 +62,7 @@ CREATE TABLE maestro (
   apellido_materno varchar(50) NOT NULL,
   firma varchar(200) NOT NULL
 );
--- * Moidificar firma por qr en formato png
+
 
 -- --------------------------------------------------------
 
