@@ -42,9 +42,9 @@
                                 '.$añadirLogos.'
                             </div>
                             <div class="datos">
-                                <div class="marquee">
+                                <!--<div class="marquee">
                                     <h1>Constancia</h1>
-                                </div>
+                                </div>-->
 
 
 
