@@ -11,9 +11,9 @@ insert into curso values(2, 'Redes');
 insert into curso values(3, 'Base de datos');
 
 -- rfc, nombre, ap_pat, ap_mat, firma
-insert into maestro values('xxxxxxxxxxxx1', 'Otilia','Robles','Campos','firma');
-insert into maestro values('xxxxxxxxxxxx2', 'Ignacio','Casal','Cuetos','firma');
-insert into maestro values('xxxxxxxxxxxx3', 'Ana','Cornejo','Tejada','firma');
+insert into maestro values('xxxxxxxxxxxx1', 'Otilia','Robles','Campos','https://www.ingenieria.unam.mx/unica/indexN.php');
+insert into maestro values('xxxxxxxxxxxx2', 'Ignacio','Casal','Cuetos','http://www.mcc.unam.mx/index.php');
+insert into maestro values('xxxxxxxxxxxx3', 'Ana','Cornejo','Tejada','http://www.mcc.unam.mx/index.php');
 
 -- id_msj, msj
 insert into mensaje_constancia values(1,'Por su gran esfuerzo y dedicación');
@@ -35,3 +35,6 @@ insert into tipo_curso values(1, 'Presencial');
 insert into tipo_curso values(2, 'En Linea');
 
 -- id_constancia, id_alumno, validada, fecha_emision, id_tipo_curso, id_periodo_curso, id_tipo_constancia, requiere_calif, calificacion, porcentaje_asis, id_mensaje_cons, id_maestro
+insert into constancias values (1,1,true,'2022-11-22',1,1,1,true,10.0,80,1,1);
+insert into constancias values (2,2,true,'2022-11-22',2,2,2,true,8.0,60,2,2);
+insert into constancias values (3,3,true,'2022-11-22',3,3,3,true,9.0,75,3,3);
