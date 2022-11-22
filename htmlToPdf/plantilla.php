@@ -1,6 +1,6 @@
 <?php
 
-    function getPlantilla($nombre, $mensaje, $firma, $logos, $imparte, $lema, $fecha){
+    function getPlantilla($nombre, $mensaje, $firma, $logos, $imparte, $fecha){
         
         $añadirLogos = "";
         if(!empty($logos)){
@@ -59,7 +59,7 @@
                                 </div>
 
                                 <div class="lema">
-                                    <h3>'.$lema.'</h3>
+                                    <h3>"POR MI RAZA HABLARÁ EL ESPÍRITU"</h3>
                                 </div>
 
                                 <div class="fecha">
