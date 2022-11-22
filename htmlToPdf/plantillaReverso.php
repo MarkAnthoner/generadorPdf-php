@@ -39,10 +39,10 @@
                     <div class="container">
                         <div class="logo-fondo">
                             <div class="header-image">
-                                '.$añadirLogos.'
+                                <!--<!--'.$añadirLogos.'
                             </div>
                             <div class="datos">
-                                <!--<div class="marquee">
+                                <div class="marquee">
                                     <h1>Constancia</h1>
                                 </div>-->
 
