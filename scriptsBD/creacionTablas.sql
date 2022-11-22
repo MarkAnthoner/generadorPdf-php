@@ -62,6 +62,7 @@ CREATE TABLE maestro (
   apellido_materno varchar(50) NOT NULL,
   firma varchar(200) NOT NULL
 );
+-- * Moidificar firma por qr en formato png
 
 -- --------------------------------------------------------
 
@@ -82,7 +83,7 @@ CREATE TABLE mensaje_constancia (
 
 CREATE TABLE periodo (
   id_periodo int NOT NULL,
-  periodo varchar(6) NOT NULL,
+  periodo varchar(15) NOT NULL,
   fecha_inicio date NOT NULL,
   fecha_final date NOT NULL
 );
