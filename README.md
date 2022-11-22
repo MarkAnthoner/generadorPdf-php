@@ -62,7 +62,7 @@ Básicamente se tiene una carpeta contenedora del proyecto en donde se almacenan
 
 
 # Tareas pendientes:
-- [ ] Probar con nombres mayores a 500 caractéres para la constancia.
+- [✔] Probar con nombres mayores a 50 caractéres para la constancia.
 - [✔] Darle un formato más parecido a la constancia proporcionada por el DID.
 - [✔] Hacer la parte trasera de la constancia.
     - Número de folio.
