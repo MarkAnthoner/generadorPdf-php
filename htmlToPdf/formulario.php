@@ -52,14 +52,34 @@
         <br>
 
         <br>
-        </datalist>
         <label>Firma 1:</label>
-        <input list="Firma" name="firma">
+        <input list="Firma" name="firma1">
         <datalist id="Firma">
             <option value="Firma1">
             <option value="Firma2">
             <option value="Firma3">
         </datalist>
+        <br>
+
+        <br>
+        <label>Funcion firma 1:</label>
+        <input type="text" name="funcionfirma1">
+        <br>
+
+
+        <br>
+        <label>Firma 2:</label>
+        <input list="Firma2" name="firma2">
+        <datalist id="Firma2">
+            <option value="Firma1">
+            <option value="Firma2">
+            <option value="Firma3">
+        </datalist>
+        <br>
+
+        <br>
+        <label>Funcion firma 2:</label>
+        <input type="text" name="funcionfirma2">
         <br>
 
         <br>

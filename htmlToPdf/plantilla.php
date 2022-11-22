@@ -1,6 +1,6 @@
 <?php
 
-    function getPlantilla($nombre, $mensaje, $firma, $logos, $imparte, $fecha){
+    function getPlantilla($nombre, $mensaje, $firma1, $funcionfirma1, $firma2, $funcionfirma2, $logos, $imparte, $fecha){
         
         $añadirLogos = "";
         if(!empty($logos)){
@@ -71,15 +71,15 @@
                                         <div class="cajaQr">
                                             <img src="http://localhost/htmltoPdf/qr/codigoQr.php?code=https://www.ingenieria.unam.mx/unica/indexN.php" />
                                         </div>
-                                        <p class="nombre">'.$firma.'</p>
-                                        <p class="ocupacion">SECRETARIO GENERAL DE LA FACULTAD DE INGENIERIA</p>
+                                        <p class="nombre">'.$firma1.'</p>
+                                        <p class="ocupacion">'.$funcionfirma1.'</p>
                                     </div>
                                     <div class="firma2">
                                         <div class="cajaQr">
                                             <img src="http://localhost/htmltoPdf/qr/codigoQr.php?code=http://www.mcc.unam.mx/index.php" />
                                         </div>
-                                        <p class="nombre">ING. ENRIQUE BARRANCO VITE</p>
-                                        <p class="ocupacion">COORDINADOR DE LA UNIDAD DE SERVICIOS DE CÓMPUTO ACADÉMICO</p>
+                                        <p class="nombre">'.$firma2.'</p>
+                                        <p class="ocupacion">'.$funcionfirma2.'</p>
                                     </div>
                                 </div>
                             </div>

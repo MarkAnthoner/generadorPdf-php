@@ -19,7 +19,10 @@
     }
     $nombre = $_POST['nombre'];
     $mensaje = $_POST['mensaje'];
-    $firma = $_POST['firma'];
+    $firma1 = $_POST['firma1'];
+    $funcionfirma1 = $_POST['funcionfirma1'];
+    $firma2 = $_POST['firma2'];
+    $funcionfirma2 = $_POST['funcionfirma2'];
     $imparte = $_POST['imparte'];
     $folio = $_POST['folio'];
 
@@ -76,7 +79,7 @@
     use mikehaertl\wkhtmlto\Pdf;
 
     require_once('plantilla.php');
-    $content = getPlantilla($nombre, $mensaje, $firma,$array_logos, $imparte, $fecha);
+    $content = getPlantilla($nombre, $mensaje, $firma1, $funcionfirma1, $firma2, $funcionfirma2, $array_logos, $imparte, $fecha);
 
     require_once('estilo.php');
     $estilo = getStyle($fondo, $array_logos);
