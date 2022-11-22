@@ -73,3 +73,6 @@ Básicamente se tiene una carpeta contenedora del proyecto en donde se almacenan
 - [✔] Página de administrador para que pueda crear, editar o eliminar constancias.
 - [ ] Pag. administrador para que pueda ver el histórico de constancias.
 - [ ] Pag admin. para que pueda firmar las constancias.
+- [ ] Firmas opciones (1-3).
+- [ ] Agregar opción para el fondo de la plantilla del reverso.
+- [ ] Guardar el formato de la constancia para solo insertar nombre de alumno.
