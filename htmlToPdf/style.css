@@ -1,0 +1,70 @@
+html{
+    font-size: 61.5%;
+    box-sizing: border-box; 
+}
+
+*, *:before, *after{ 
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 5rem;
+}
+
+.titulo{
+    margin: 2rem;
+    padding: 2rem;
+    font-size: 10rem;
+    text-decoration: underline;
+}
+
+.formulario{
+    margin:2rem;
+}
+
+input[type=submit]{
+    width:100px; 
+    height:50px; 
+    font-size:25px
+}
+
+input[type=radio]{
+    border: 0px;
+    height: 4rem;   
+}
+
+table {
+    margin: 0 auto;
+    table-layout: fixed;
+    width: 90%;
+    border-collapse: collapse;
+    border: 3px solid;
+}
+
+th, td {
+    padding: 2rem;
+    border : 3px solid;
+}
+
+.opciones{
+    text-align: left;
+    margin: 2rem 0rem 2rem 10rem; /* Arriba, Derecha, Abajo, Izquierda */
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.formulario-constancia{
+    margin: 2rem 0 2rem 5rem;
+    text-align: left;
+    font-size: 3rem;
+}
+
+input[type=checkbox]{
+    height: 2rem;
+}
+
