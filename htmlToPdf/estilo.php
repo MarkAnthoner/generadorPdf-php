@@ -1,7 +1,7 @@
 <?php
     header("Content-Type: text/css; charset: UTF-8");
 
-    function getStyle($fondo, $logos){
+    function getStyle($fondo, $logos, $arreglo_nombresFirmas, $arreglo_funcionesFirmas){
         
         if(strcmp($fondo,"Fondo1")==0){
             $image_fondo = 'FondoCertificado.jpg';
@@ -222,7 +222,7 @@
 
             }elseif(strcmp($logo,"UNICA")==0){
                 $estilo .=
-                "
+                " 
                     .fondo_unica{
                         background-image: url('http://localhost/htmlToPdf/src/UNICA.png');
                         background-position: center;
@@ -230,6 +230,73 @@
                 ";
             }
         }
+
+
+
+        if(!empty($arreglo_nombresFirmas)){
+            $estilo.=    
+                ".firmas{
+                    margin: 0 auto;
+                    margin-top: -80px;
+                    padding: 10rem 15rem 0 15rem ;
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+                
+                ";
+            if(sizeof($logos)==1){
+                $estilo .=
+                "
+                    .firmasVar{
+                        display: -webkit-box;
+                        display: flex;
+                        flex-direction: row;
+                        -webkit-box-pack: center;
+                        justify-content: center;
+                    }   
+                "; 
+            }else{
+                $estilo .=
+                "
+                .firmasVar{
+                        display: -webkit-box;
+                        display: flex;
+                        flex-direction: row;
+                        -webkit-box-pack: justify;
+                        justify-content: space-between;
+                    }   
+                ";
+            }
+        }
+        /*foreach($logos as $logo){
+            if(strcmp($logo,"FI")==0){
+                $estilo .=
+                "
+                    .fondoFi{
+                        background-image: url('http://localhost/htmlToPdf/src/FI.png');
+                    }
+                ";
+            }
+            elseif(strcmp($logo,"UNAM")==0){
+                $estilo .=
+                "
+                    .fondoUnam{
+                        background-image: url('http://localhost/htmlToPdf/src/UNAM.png');
+                        
+                    }
+                ";
+
+            }elseif(strcmp($logo,"UNICA")==0){
+                $estilo .=
+                " 
+                    .fondo_unica{
+                        background-image: url('http://localhost/htmlToPdf/src/UNICA.png');
+                        background-position: center;
+                    }
+                ";
+            }
+        }*/
+
         
         return $estilo;
     }
