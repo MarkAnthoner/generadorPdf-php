@@ -1,6 +1,11 @@
 --
 -- Database: `intersemestrales`
 --
+/*
+drop table constancias;
+drop table alumno,curso,maestro, mensaje_constancia, periodo, tipo_constancia,tipo_curso;
+drop table administrativo, admin_funcion, logo, fondo;
+*/
 
 -- --------------------------------------------------------
 
@@ -9,7 +14,7 @@
 --
 
 create table alumnos (
-	id_alumno varchar(18) not null,
+	id_alumno varchar(18) not null, -- curp
 	numero_cuenta int not null,
 	nombre varchar(100) not null,
 	apellido_paterno varchar(50) default null,
@@ -35,7 +40,16 @@ CREATE TABLE constancias (
   calificacion float NOT NULL,
   porcentaje_asistencia int NOT NULL,
   id_mensaje_constancia int NOT NULL,
-  id_maestro int NOT NULL
+  id_maestro int NOT null, 
+  --
+  folio int not null,
+  id_admin int null,
+  id_admin2 int null,
+  id_admin3 int null,
+  id_fondo int not null,
+  id_logo1 int null,
+  id_logo2 int null,
+  id_logo3 int null 
 );
 
 -- --------------------------------------------------------
@@ -111,8 +125,54 @@ CREATE TABLE tipo_curso (
 );
 
 --
+-- Table structure for table 'administrativo'
+--
+
+create table administrativo(
+	id_admin int not null,
+	nombre varchar(50) not null,
+	ap_pat varchar(25) not null,
+	ap_mat varchar(25) not null,
+	id_funcion int not null,
+	firma varchar(200) not null
+);
+
+create table admin_funcion(
+	id_funcion int not null,
+	funcion varchar(200) not null
+);
+
+create table logo(
+	id_logo int not null,
+	logo varchar(20) not null
+);
+
+
+create table fondo(
+	id_fondo int not null,
+	fondo varchar(20) not null
+);
+
+
+--
 -- Indexes for dumped tables
 --
+
+alter table fondo
+	add primary key(id_fondo);
+
+alter table logo
+	add primary key(id_logo);
+
+alter table admin_funcion
+	add primary key(id_funcion);
+
+alter table administrativo
+	add primary key(id_admin);
+
+alter table administrativo
+	add constraint id_funcion foreign key (id_funcion) references admin_funcion(id_funcion) on delete cascade on update cascade; 
+	
 
 --
 -- Indexes for table `alumnos`
@@ -172,4 +232,19 @@ ALTER TABLE constancias
   ADD CONSTRAINT id_curso FOREIGN KEY (id_tipo_curso) REFERENCES curso (id_curso) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT id_mensaje_constancia FOREIGN KEY (id_mensaje_constancia) REFERENCES mensaje_constancia (id_mensaje_constancia) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT id_periodo_curso FOREIGN KEY (id_periodo_curso) REFERENCES periodo (id_periodo) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT id_tipo_constancia FOREIGN KEY (id_tipo_constancia) REFERENCES tipo_constancia (id_tipo_constancia) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT id_tipo_constancia FOREIGN KEY (id_tipo_constancia) REFERENCES tipo_constancia (id_tipo_constancia) ON DELETE CASCADE ON UPDATE cascade,
+ --
+ add constraint id_admin foreign key (id_admin) references administrativo(id_admin) on delete cascade on update cascade,
+ add constraint id_admin2 foreign key (id_admin2) references administrativo(id_admin) on delete cascade on update cascade,
+ add constraint id_admin3 foreign key (id_admin3) references administrativo(id_admin) on delete cascade on update cascade,
+ add constraint id_fondo foreign key (id_fondo) references fondo(id_fondo) on delete cascade on update cascade,
+ add constraint id_logo1 foreign key (id_logo1) references logo(id_logo) on delete cascade on update cascade,
+ add constraint id_logo2 foreign key (id_logo2) references logo(id_logo) on delete cascade on update cascade,
+ add constraint id_logo3 foreign key (id_logo3) references logo(id_logo) on delete cascade on update cascade;
+ 
+ 
+ 
+ 
+ 
+ 
+ 
