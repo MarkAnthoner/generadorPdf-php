@@ -3,7 +3,7 @@
 --
 /*
 drop table constancias;
-drop table alumno,curso,maestro, mensaje_constancia, periodo, tipo_constancia,tipo_curso;
+drop table alumnos,curso,maestro, mensaje_constancia, periodo, tipo_constancia,tipo_curso;
 drop table administrativo, admin_funcion, logo, fondo;
 */
 
@@ -70,6 +70,7 @@ CREATE TABLE curso (
 --
 
 CREATE TABLE maestro (
+	id_maestro int not null,
   rfc varchar(13) NOT NULL,
   nombre varchar(100) NOT NULL,
   apellido_paterno varchar(50) NOT NULL,
@@ -197,7 +198,7 @@ ALTER TABLE curso
 -- Indexes for table `maestro`
 --
 ALTER TABLE maestro
-  ADD PRIMARY KEY (rfc);
+  ADD PRIMARY KEY (id_maestro);
 
 --
 -- Indexes for table `mensaje_constancia`
@@ -234,6 +235,7 @@ ALTER TABLE constancias
   ADD CONSTRAINT id_periodo_curso FOREIGN KEY (id_periodo_curso) REFERENCES periodo (id_periodo) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT id_tipo_constancia FOREIGN KEY (id_tipo_constancia) REFERENCES tipo_constancia (id_tipo_constancia) ON DELETE CASCADE ON UPDATE cascade,
  --
+ add constraint id_maestro foreign key (id_maestro) references maestro(id_maestro) on delete cascade on update cascade,
  add constraint id_admin foreign key (id_admin) references administrativo(id_admin) on delete cascade on update cascade,
  add constraint id_admin2 foreign key (id_admin2) references administrativo(id_admin) on delete cascade on update cascade,
  add constraint id_admin3 foreign key (id_admin3) references administrativo(id_admin) on delete cascade on update cascade,
