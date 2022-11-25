@@ -68,7 +68,7 @@ Básicamente se tiene una carpeta contenedora del proyecto en donde se almacenan
     - Número de folio.
     - Código QR.
 - [✔] Insertar contenido en la base de datos.
-- [ ] Conectar la base de datos con php.
+- [✔] Conectar la base de datos con php.
 - [✔] Página de alumno para que pueda consultar sus constancias.
 - [✔] Página de administrador para que pueda crear, editar o eliminar constancias.
 - [ ] Pag. administrador para que pueda ver el histórico de constancias.
