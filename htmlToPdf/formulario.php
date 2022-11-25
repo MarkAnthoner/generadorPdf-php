@@ -30,9 +30,6 @@
         <input type="checkbox" name="logos[]" value="UNAM">UNAM</input>
         <input type="checkbox" name="logos[]" value="UNICA">UNICA</input>
         <br>
-        <br>
-
-        <hr>
 
         <br>
         <label>Nombre del estudiante:</label>
@@ -53,29 +50,7 @@
         <label>Quien imparte los Cursos:</label>
         <input type="text" name="imparte">
         <br>
-        <br>
 
-        <hr>
-
-            <h1>Firmas</h1>
-            <h3>Presione el botón para enviar más firmas</h3>   
-            <div>
-                <button id="add">Agregar otra firma</button>
-            </div>
-
-            <div id="input">
-                <br>
-                <label>Nombre</label>
-                <input type="text" name="nombresFirmas[]"/>
-                <label>Funcion</label>
-                <input type="text" name ="funcionesFirmas[]"/>
-                <br>
-            </div>
-
-        <br>
-
-
-<!-- 
         <br>
         <label>Firma 1:</label>
         <input list="Firma" name="firma1">
@@ -105,9 +80,7 @@
         <br>
         <label>Funcion firma 2:</label>
         <input type="text" name="funcionfirma2">
-        <br> -->
-
-        <hr>
+        <br>
 
         <br>
         <label>Folio:</label>
@@ -117,21 +90,4 @@
         <input type="submit"/>
     </form>
 </body>
-
-<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    <script type = "text/javascript">   
-        $(document).ready(function(){
-            $('#add').click(function(){
-                    $input = $('<br>'   
-                    + '<label>Nombre</label>'
-                    + '<input type="text" name="nombresFirmas[]" required = "required"/>'
-                    + '<label>Funcion</label>'
-                    + '<input type="text" name="funcionesFirmas[]" required = "required"/>'
-                    + '<br>');
-                    $input.fadeIn(1000).appendTo('#input');
-            });
-        });
-    </script> 
-
-
 </html>

@@ -1,3 +1,8 @@
+<?php
+    // Conexion a la base de datos
+    include_once('./bd/config.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
