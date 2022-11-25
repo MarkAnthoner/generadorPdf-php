@@ -1,6 +1,6 @@
 <?php
 
-    function getPlantilla($nombre, $mensaje, $firma1, $funcionfirma1, $firma2, $funcionfirma2, $logos, $imparte, $fecha){
+    function getPlantilla($nombre, $mensaje, $arreglo_nombresFirmas, $arreglo_funcionesFirmas, $logos, $imparte, $fecha){
         
         $añadirLogos = "";
         if(!empty($logos)){
@@ -25,6 +25,26 @@
                 }
             }
         }
+
+
+        $añadirFirmas = "";
+        if(!empty($arreglo_nombresFirmas)){
+            $arrlength = count($arreglo_nombresFirmas);
+            for($x = 0; $x < $arrlength; $x++) {
+                
+                $añadirFirmas .= '
+                    <div>
+                        <div class="cajaQr">
+                            <img src="http://localhost/htmltoPdf/qr/codigoQr.php?code=https://www.ingenieria.unam.mx/unica/indexN.php" />
+                        </div>
+                        <p>'.$arreglo_nombresFirmas[$x].'</p>
+                        <p>'.$arreglo_funcionesFirmas[$x].'</p>
+                    </div>
+                ';
+
+            }
+        }
+
 
         $plantilla = 
             '<!DOCTYPE html>
@@ -67,20 +87,9 @@
                                 </div>
 
                                 <div class="firmas">
-                                    <div class="firma1">
-                                        <div class="cajaQr">
-                                            <img src="http://localhost/htmltoPdf/qr/codigoQr.php?code=https://www.ingenieria.unam.mx/unica/indexN.php" />
-                                        </div>
-                                        <p class="nombre">'.$firma1.'</p>
-                                        <p class="ocupacion">'.$funcionfirma1.'</p>
-                                    </div>
-                                    <div class="firma2">
-                                        <div class="cajaQr">
-                                            <img src="http://localhost/htmltoPdf/qr/codigoQr.php?code=http://www.mcc.unam.mx/index.php" />
-                                        </div>
-                                        <p class="nombre">'.$firma2.'</p>
-                                        <p class="ocupacion">'.$funcionfirma2.'</p>
-                                    </div>
+                                    <div class="firmasVar">
+                                    '.$añadirFirmas.'
+                                    </div>    
                                 </div>
                             </div>
                         </div>
