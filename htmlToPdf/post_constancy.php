@@ -17,16 +17,30 @@
             array_push($array_logos, $logo);
         }
     }
+    /*Guardo los nombres de las firmas y las funciones en arreglos*/ 
+    $array_nombresFirmas = [];
+    if(!empty($_POST['nombresFirmas'])){
+        foreach($_POST['nombresFirmas'] as $nombreFirma){
+            array_push($array_nombresFirmas, $nombreFirma);
+        }
+    }
+
+    $array_funcionesFirmas = [];
+    if(!empty($_POST['funcionesFirmas'])){
+        foreach($_POST['funcionesFirmas'] as $funcionFirma){
+            array_push($array_funcionesFirmas, $funcionFirma);
+        }
+    }
+
     $nombre = $_POST['nombre'];
     $mensaje = $_POST['mensaje'];
-    $firma1 = $_POST['firma1'];
+    /*$firma1 = $_POST['firma1'];
     $funcionfirma1 = $_POST['funcionfirma1'];
     $firma2 = $_POST['firma2'];
-    $funcionfirma2 = $_POST['funcionfirma2'];
+    $funcionfirma2 = $_POST['funcionfirma2'];*/
     $imparte = $_POST['imparte'];
     $folio = $_POST['folio'];
-
-
+    
     $dia = date("d");
     $month = date("m");
     $anio = date("Y");
@@ -79,10 +93,10 @@
     use mikehaertl\wkhtmlto\Pdf;
 
     require_once('plantilla.php');
-    $content = getPlantilla($nombre, $mensaje, $firma1, $funcionfirma1, $firma2, $funcionfirma2, $array_logos, $imparte, $fecha);
+    $content = getPlantilla($nombre, $mensaje, $array_nombresFirmas, $array_funcionesFirmas, $array_logos, $imparte, $fecha);
 
     require_once('estilo.php');
-    $estilo = getStyle($fondo, $array_logos);
+    $estilo = getStyle($fondo, $array_logos, $array_nombresFirmas, $array_funcionesFirmas);
 
     $pdf = new Pdf(array(
         'user-style-sheet' => $estilo

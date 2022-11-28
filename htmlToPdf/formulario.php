@@ -84,46 +84,22 @@
                     </tr>
                     <tr>
                         <td>
-                            <label>Firma 1:</label>
+                            <label>Firmas</label>
+                            <h3>Presione el botón para enviar más firmas</h3>
+                            <div>
+                                <button id="add">Agregar otra firma</button>
+                            </div>   
                         </td>
                         <td>
-                            <input list="Firma" name="firma1">
-                            <datalist id="Firma">
-                                <option value="Firma1">
-                                <option value="Firma2">
-                                <option value="Firma3">
-                            </datalist>
+                        <div id="input">
+                            <label>Nombre</label>
+                            <input type="text" name="nombresFirmas[]"/>
+                            <label>Funcion</label>
+                            <input type="text" name ="funcionesFirmas[]"/>
+                        </div>
                         </td>
                     </tr>
-                    <tr>
-                        <td>
-                            <label>Funcion firma 1:</label>
-                        </td>
-                        <td>
-                            <input type="text" name="funcionfirma1">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label>Firma 2:</label>
-                        </td>
-                        <td>
-                            <input list="Firma2" name="firma2">
-                            <datalist id="Firma2">
-                                <option value="Firma1">
-                                <option value="Firma2">
-                                <option value="Firma3">
-                            </datalist>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label>Funcion firma 2:</label>
-                        </td>
-                        <td>
-                            <input type="text" name="funcionfirma2">
-                        </td>
-                    </tr>
+                    
                     <tr>
                         <td>
                             <label>Folio:</label>
@@ -145,4 +121,20 @@
 
 
 </body>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script type = "text/javascript">   
+        $(document).ready(function(){
+            $('#add').click(function(){
+                    $input = $('<br>'   
+                    + '<label>Nombre</label>'
+                    + '<input type="text" name="nombresFirmas[]" required = "required"/>'
+                    + '<label>Funcion</label>'
+                    + '<input type="text" name="funcionesFirmas[]" required = "required"/>'
+                    + '<br>');
+                    $input.fadeIn(1000).appendTo('#input');
+            });
+        });
+    </script> 
+
 </html>
