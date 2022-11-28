@@ -9,7 +9,7 @@
             $image_fondo = "fondo2.jpg";
         }else{
             $image_fondo = "fondo4.png";
-        }
+        } 
 
         $estilo ="
             html{
@@ -100,7 +100,7 @@
                 margin-bottom: 0;
             }
             
-            .firmas{
+            /*.firmas{
                 margin: 0 auto;
                 margin-top: -80px;
                 display: -webkit-box;
@@ -111,7 +111,7 @@
                 padding: 10rem 15rem 0 15rem ;
                 font-size: 10px;
                 font-weight: bold;
-            }
+            }*/
 
             .reverso {
                 margin: auto;
@@ -235,35 +235,41 @@
 
         if(!empty($arreglo_nombresFirmas)){
             $estilo.=    
-                ".firmas{
+                "/*.firmas{
                     margin: 0 auto;
                     margin-top: -80px;
                     padding: 10rem 15rem 0 15rem ;
                     font-size: 12px;
                     font-weight: bold;
-                }
+                }*/
                 
                 ";
-            if(sizeof($logos)==1){
+            if(sizeof($arreglo_nombresFirmas)==1){
                 $estilo .=
                 "
                     .firmasVar{
+                        margin-top: -55px;
                         display: -webkit-box;
                         display: flex;
                         flex-direction: row;
                         -webkit-box-pack: center;
                         justify-content: center;
+                        font-size: 12px;
+                        padding: 5rem 10rem 0 10rem; 
                     }   
                 "; 
             }else{
                 $estilo .=
                 "
                 .firmasVar{
-                        display: -webkit-box;
-                        display: flex;
-                        flex-direction: row;
-                        -webkit-box-pack: justify;
-                        justify-content: space-between;
+                    margin-top: -55px;
+                    display: -webkit-box;
+                    display: flex;
+                    flex-direction: row;
+                    -webkit-box-pack: justify;
+                    justify-content: space-between;
+                    font-size: 12px;
+                    padding: 5rem 10rem 0 10rem; 
                     }   
                 ";
             }

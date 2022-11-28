@@ -19,15 +19,17 @@
     }
     /*Guardo los nombres de las firmas y las funciones en arreglos*/ 
     $array_nombresFirmas = [];
-    if(!empty($_POST['nombresFirmas'])){
-        foreach($_POST['nombresFirmas'] as $nombreFirma){
+    $nombres = $_POST['nombresFirmas'];
+    if(!empty($nombres)){
+        foreach($nombres as $nombreFirma){
             array_push($array_nombresFirmas, $nombreFirma);
         }
     }
 
     $array_funcionesFirmas = [];
-    if(!empty($_POST['funcionesFirmas'])){
-        foreach($_POST['funcionesFirmas'] as $funcionFirma){
+    $funciones = $_POST['funcionesFirmas'];
+    if(!empty($funciones)){
+        foreach($funciones as $funcionFirma){
             array_push($array_funcionesFirmas, $funcionFirma);
         }
     }
