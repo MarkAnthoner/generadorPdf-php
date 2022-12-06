@@ -5,7 +5,7 @@ insert into alumnos values(1,000000001,'LUIS','NEIRA','DEL ROMERO');
 insert into alumnos values(2,000000002,'PAOLA','ESPAÑA','VALER');
 insert into alumnos values(3,000000003,'APOLINAR','ANDREU','TORRIJOS');
 
-SELECT nombre,apellido_paterno,apellido_materno from alumnos;
+--SELECT nombre,apellido_paterno,apellido_materno from alumnos;
 
 -- id_curso, tipo_curso
 insert into curso values(1, 'Linux basico');
@@ -13,9 +13,9 @@ insert into curso values(2, 'Redes');
 insert into curso values(3, 'Base de datos');
 
 -- rfc, nombre, ap_pat, ap_mat, firma
-insert into maestro values('xxxxxxxxxxxx1', 'OTILIA','ROBLES','CAMPOS','https://www.ingenieria.unam.mx/unica/indexN.php');
-insert into maestro values('xxxxxxxxxxxx2', 'IGNACIO','CASAL','CUETOS','http://www.mcc.unam.mx/index.php');
-insert into maestro values('xxxxxxxxxxxx3', 'ANA','CORNEJO','TEJADA','http://www.mcc.unam.mx/index.php');
+insert into maestro values('1','xxxxxxxxxxxx1', 'OTILIA','ROBLES','CAMPOS','https://www.ingenieria.unam.mx/unica/indexN.php');
+insert into maestro values('2','xxxxxxxxxxxx2', 'IGNACIO','CASAL','CUETOS','http://www.mcc.unam.mx/index.php');
+insert into maestro values('3','xxxxxxxxxxxx3', 'ANA','CORNEJO','TEJADA','http://www.mcc.unam.mx/index.php');
 
 -- id_msj, msj
 insert into mensaje_constancia values(1,'POR SU GRAN ESFUERZO Y DEDICACIÓN');
@@ -43,7 +43,7 @@ insert into admin_funcion values (2, 'COORDINADOR DE LA UNIDAD DE SERVICIOS DE C
 -- id_admin, nombre, ap_pat, ap_mat, id_funcion, firma
 insert into administrativo values (1,'SARITA','LOPEZ','COROMINAS',1,'https://www.ingenieria.unam.mx/unica/indexN.php');
 insert into administrativo values (2,'TEOBALDO','IBAÑEZ','PINDEO',2,'http://www.mcc.unam.mx/index.php' );
-insert into administrativo values (3, 'FELLIX','CEPEDA','VILLALOBOS',1,'http://www.mcc.unam.mx/index.php')
+insert into administrativo values (3, 'FELLIX','CEPEDA','VILLALOBOS',1,'http://www.mcc.unam.mx/index.php');
 
 -- id_logo, logo
 insert into logo values (1,'FI');
